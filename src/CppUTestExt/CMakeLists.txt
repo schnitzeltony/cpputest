@@ -40,7 +40,7 @@ set(CppUTestExt_headers
         ${CppUTestRootDirectory}/include/CppUTestExt/MockSupport.h
 )
 
-add_library(CppUTestExt ${CppUTestExt_src} ${CppUTestExt_headers})
+add_library(CppUTestExt STATIC ${CppUTestExt_src} ${CppUTestExt_headers})
 target_link_libraries(CppUTestExt ${CPPUNIT_EXTERNAL_LIBRARIES})
 
 #[[Arrange for the include directory to be added to the include paths of any CMake target depending on CppUTestExt.]]
