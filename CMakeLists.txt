@@ -151,7 +151,7 @@ include(CMakePackageConfigHelpers OPTIONAL
 if(PkgHelpers_AVAILABLE)
   configure_package_config_file(CppUTestConfig.cmake.install.in
     ${CMAKE_CURRENT_BINARY_DIR}/install/CppUTestConfig.cmake
-    INSTALL_DESTINATION ${LIB_INSTALL_DIR}/CppUTest/cmake
+    INSTALL_DESTINATION ${LIB_INSTALL_DIR}/cmake/CppUTest
     PATH_VARS INCLUDE_INSTALL_DIR LIB_INSTALL_DIR)
   write_basic_package_version_file(
     ${CMAKE_CURRENT_BINARY_DIR}/install/CppUTestConfigVersion.cmake
@@ -159,13 +159,13 @@ if(PkgHelpers_AVAILABLE)
     COMPATIBILITY SameMajorVersion )
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/install/CppUTestConfig.cmake
     ${CMAKE_CURRENT_BINARY_DIR}/install/CppUTestConfigVersion.cmake
-    DESTINATION ${LIB_INSTALL_DIR}/CppUTest/cmake )
+    DESTINATION ${LIB_INSTALL_DIR}/cmake/CppUTest )
   install(EXPORT CppUTestTargets
-    DESTINATION ${LIB_INSTALL_DIR}/CppUTest/cmake)
+    DESTINATION ${LIB_INSTALL_DIR}/cmake/CppUTest)
   install(FILES  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Scripts/CppUTestBuildTimeDiscoverTests.cmake
-    DESTINATION ${LIB_INSTALL_DIR}/CppUTest/cmake/Scripts)
+    DESTINATION ${LIB_INSTALL_DIR}/cmake/CppUTest/Scripts)
   install(FILES  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules/CppUTestBuildTimeDiscoverTests.cmake
-    DESTINATION ${LIB_INSTALL_DIR}/CppUTest/cmake/Modules)
+    DESTINATION ${LIB_INSTALL_DIR}/cmake/CppUTest/Modules)
   configure_package_config_file(CppUTestConfig.cmake.build.in
     ${CMAKE_CURRENT_BINARY_DIR}/CppUTestConfig.cmake
     INSTALL_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}
